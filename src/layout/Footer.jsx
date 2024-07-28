@@ -3,6 +3,6 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <p className='text-lg'>Aquí en Paraguana 2024</p>
   )
 }

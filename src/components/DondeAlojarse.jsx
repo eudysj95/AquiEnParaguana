@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 
-export const DondeHospedarse = () => {
+export const DondeAlojarse = () => {
   return (
-    <div>Donde Hospedarse</div>
+    <div>Donde Alojarse</div>
   )
 }

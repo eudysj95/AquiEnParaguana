@@ -5,18 +5,22 @@ import { Nav } from '../layout/Nav';
 import { Footer } from '../layout/Footer';
 import { DondeComer } from '../components/DondeComer';
 import { DondeComprar } from '../components/DondeComprar';
-import { DondeHospedarse } from '../components/DondeHospedarse';
+import { DondeAlojarse } from '../components/DondeAlojarse';
 import { DondeRecrearse } from '../components/DondeRecrearse';
 import { ServiciosPublicos } from '../components/ServiciosPublicos';
 
 export const Rutas = () => {
   return (
-    <div>
 
       <BrowserRouter>
 
-        <Header />
-        <Nav />
+      <div className='w-screen min-h-screen relative pb-10 p-4'>
+
+        <div>
+          <Header />
+          <Nav />  
+        </div>
+        
       
         <Routes>
 
@@ -24,17 +28,23 @@ export const Rutas = () => {
           <Route path='/inicio' element={<Inicio />} />
           <Route path='/comer' element={<DondeComer />} />
           <Route path='/comprar' element={<DondeComprar />} />
-          <Route path='/hospedarse' element={<DondeHospedarse />} />
+          <Route path='/alojarse' element={<DondeAlojarse />} />
           <Route path='/recrearse' element={<DondeRecrearse />} />
           <Route path='/servicios' element={<ServiciosPublicos />} />
 
         </Routes>
 
-        <Footer />
+        <div className='absolute bottom-0 w-screen bg-blue-400 h-10 text-center leading-10'>
+          <Footer />
+        </div>
+
+        
+
+      </div>
 
       </BrowserRouter>
 
 
-    </div>
+    
   )
 }
