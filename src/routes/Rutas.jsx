@@ -34,7 +34,7 @@ export const Rutas = () => {
 
         </Routes>
 
-        <div className='absolute bottom-0 w-screen bg-blue-400 h-10 text-center leading-10'>
+        <div className='absolute bottom-0 w-screen bg-[#00A3E8] h-10 text-center leading-10'>
           <Footer />
         </div>
 
