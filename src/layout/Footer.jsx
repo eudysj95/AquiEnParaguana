@@ -3,6 +3,6 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <p className='text-lg'>Aquí en Paraguana 2024</p>
+    <p className='text-sm text-white leading-10'>Aquí en Paraguana 2024 &copy; Todos los derechos reservados</p>
   )
 }
