@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 export const DondeComer = () => {
 
-  const [users, setUsers] = useState([]);
+  const [usersComer, setUsersComer] = useState([]);
 
   useEffect(() => {
 
@@ -22,16 +22,16 @@ export const DondeComer = () => {
     let datos = await peticion.json();
 
     if(datos.status === "succes"){
-      setUsers(datos.users);
+      let users = datos.users;
+      let datosFiltrados = users.filter(user => user.categoria == "comer")
+      setUsersComer(datosFiltrados);
     }
-
-    
   }
 
   return (
     <div className='p-8 grid grid-cols-4 gap-8'>
 
-      <Tarjeta users={users} ></Tarjeta>
+      <Tarjeta users={usersComer} ></Tarjeta>
       
 
     </div>

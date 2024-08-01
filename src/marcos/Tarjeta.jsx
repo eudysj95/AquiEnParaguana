@@ -11,7 +11,7 @@ export const Tarjeta = ({users}) => {
     users.length >= 1 ? (
       users.map(user => {
         return (
-          <div key={user._id} className='flex flex-col justify-between h-60 w-68 bg-[#00A3E8] p-2 text-center text-white rounded-md'>
+          <div key={user._id} className='flex flex-col justify-between max-h-60 max-w-68 bg-[#00A3E8] p-2 text-center text-white rounded-md'>
   
           <h2 className='text-xl font-bold'>{user.nombre}</h2>
           <p>{user.descripcion}</p>
@@ -19,8 +19,6 @@ export const Tarjeta = ({users}) => {
           {user.imagen && <img className='mx-auto rounded h-24' src={"http://localhost:3900/api/imagen/"+user.imagen} alt="img" />}
           <p>{user.direccion}</p>
           <p>{user.telefono}</p>
-          
-  
       </div>
         )
       })
